@@ -3,17 +3,20 @@
 int main(){
         int i;
         const int anzahlnoten = 5;
-        int array[6];
-
+        int array[5];
         printf("Programm Notenspiegel\n");
 
-        for(i=1;i<=5;i++){
-                printf("Bitte geben Sie die Anzahl der Note %d ein: ", i);
-                scanf("%d", &array[i]);}
+        for(i=1;i<=5;i++)
+        {
+            printf("Bitte geben Sie die Anzahl der Note %d ein: ", i);
+            scanf("%d", &array[i]);
+        }
 
         printf("\nDer Notenspiegel sieht wie folgt aus:");
-        for(i=1;i<=5;i++){
-                printf("\nDie Anzahl der Note %d betraegt: %d ", i, array[i]);}
+        for(i=1;i<=5;i++)
+        {
+            printf("\nDie Anzahl der Note %d betraegt: %d ", i, array[i]);
+        }
 
         int gesamt = array[1] + array[2] + array[3] + array[4] + array[5];
         printf("\nDie Gesamtanzahl der Noten betraegt: %d ", gesamt);
