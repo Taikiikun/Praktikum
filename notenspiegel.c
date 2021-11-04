@@ -27,6 +27,6 @@ int main(){
         float note5 = array[5];
         float anzahl = gesamt;
         double dq = (note5/anzahl)*100.0;
-        printf("\nDie Durchfallquote betraegt: %2.1lf% \n", dq);
+        printf("\nDie Durchfallquote betraegt: %3.1lf% \n", dq);
         return 0;
 }
