@@ -5,7 +5,7 @@ int main()
     printf("Programm Wuerfelspiel\n\n");
     
     int i;
-    int dice[5];    // Würfel Array
+    int dice[5];    // Würfel Array Wertebereich 0-1-2-3-4
     int counter[6]; // Augenzahlen Array
     
     //Benutzereingabe für die gewürfelte Augenzahlen
