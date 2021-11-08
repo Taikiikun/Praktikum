@@ -8,9 +8,7 @@ int main()
 {
     int eingabe;
     int i;
-    const int max = eingabe;
     int xxx;
-    
     
     printf("Programm Zahlenfolge\n\n");
     
