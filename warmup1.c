@@ -14,7 +14,7 @@ int main()
     
     sum=x+y;
     
-    printf("\n\nDie Summe von %i und %i ist %i", x, y, sum);
+    printf("\n\nDie Summe von %i und %i ist %i.", x, y, sum);
 
     return 0;
 }
