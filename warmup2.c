@@ -1,3 +1,30 @@
+// Programm Quadratzahlen
+
+#include <stdio.h>
+
+int main()
+{
+    int eingabe;
+    int i;
+    const int max = eingabe;
+    int xxx;
+    
+    
+    printf("Programm Zahlenfolge\n\n");
+    
+    printf("Wieviele Quadratzahlen sollen berechnet werden? ");
+    scanf("%i", &eingabe);
+    
+    printf("\n\nHier die %i Zweierpotenzen: ", eingabe);
+    for(i=1; i<=eingabe; i++){
+        xxx = i*i;
+        printf("%i; ", xxx);
+    }
+    return 0;
+}
+
+//Programm 2er Potenzen
+
 #include <stdio.h>
 
 int main()
@@ -11,10 +38,10 @@ int main()
     
     printf("Programm Zahlenfolge\n\n");
     
-    printf("Wieviele Quadratzahlen sollen berechnet werden? ");
+    printf("Wieviele Zweierpotenzen sollen berechnet werden? ");
     scanf("%i", &eingabe);
     
-    printf("\n\nHier die %i Quadratzahlen: ", eingabe);
+    printf("\n\nHier die %i Zweierpotenzen: ", eingabe);
     for(expo = 0; expo<=eingabe; expo++){
         xxx = basis<<expo;
         printf("%i; ", xxx);
