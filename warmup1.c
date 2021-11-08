@@ -4,8 +4,7 @@
 
 int main()
 {
-    int x, y;
-    int sum;
+    int x, y, sum;
     
     printf("Programm: Berechne x + y\n\n");
     printf("Bitte Wert für x eingeben: ");
