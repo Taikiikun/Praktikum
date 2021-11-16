@@ -91,3 +91,70 @@ int main()
 
     return 0;
 }
+
+
+
+
+
+
+// ANDERE MUSTERLÖSUNG
+#include <stdio.h>
+int main() {
+    char matrix[5][5];
+    int m, n, o;
+    int spalte;
+    int zeile;
+    printf("Die Matrix sieht so aus:\n");
+    for(m=0; m<5; m++){
+            for(n=0; n<5; n++){
+                matrix [m][n] = '+';
+            }
+    }
+    for(m=0; m<5; m++){
+        for(n=0; n<5; n++){
+            printf("%c ", matrix [m][n]);
+        }
+        printf("\n");
+    }
+    printf("\nOptionen:\n\n");
+    while(o!=6){
+        printf("(1) Fülle alle Felder mit 0\n(2) Fülle die beiden Diagonalen mit 0\n(3) Fülle ein spezielles Feld mit 0 (Spalte, Zeile)\n(4) Refresh: Fülle alle Felder wieder mit +\n(5) Ausgabe der Matrix auf dem Bildschirm\n(6) Ende des Programms\n\n");
+        scanf("%i", &o);
+        switch(o){
+            case 1: for(m=0; m<5; m++){
+                for(n=0; n<5; n++){
+                    matrix [m][n] = '0';
+                }
+            }
+            break;
+            case 2:n=4;
+            for(m=0;m<=4;m++){
+                matrix[m][m]='0';
+                matrix[m][n]='0';
+            n--;
+            }
+            break;
+            case 3:printf("Bitte geben Sie erst die Spalte, dann die Zeile ein:\n");
+                scanf("%i%i", &spalte, &zeile);
+                matrix [zeile-1][spalte-1]='0';
+            break;
+            case 4:for(m=0; m<5; m++){
+                for(n=0; n<5; n++){
+                    matrix [m][n] = '+';
+                    }
+                }
+            break;
+            case 5: printf("Die Matrix sieht nun so aus:\n");
+                for(m=0; m<5; m++){
+                    for(n=0; n<5; n++){
+                    printf("%c ", matrix [m][n]);
+                    }
+                printf("\n");
+                }
+                break;
+            case 6: return 0 ;
+        default: printf("Ungültige Eingabe!!\n");
+        }
+    }
+    return 0;
+}
