@@ -8,7 +8,7 @@ int main(){
   printf("Bitte geben Sie für n eine Zahl ein:\n");
   scanf("%i", &zahl);
   
-  if(zahl < 2 && zahl > -2)
+  if(zahl < 2 && zahl > -1)
     printf("JA!\n");
   for(counter = 3; counter < zahl; counter++)
   {
