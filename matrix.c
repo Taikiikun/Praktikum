@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
@@ -45,6 +44,7 @@ int main()
             printf("\n");
         }while(counter <5);
     
+        // Option 1 initialisieren
         if(counter == 1){
             //Matrix initialisieren und mit 0 füllen
             for(n = 0; n <= zeile; n++){
@@ -53,6 +53,8 @@ int main()
                 }
             }
         }
+        
+        // Option 2 initialisieren (wie ohne Hardcodeing?)
         if(counter == 2){
             matrix[0][0] = zeichen2;
             matrix[1][1] = zeichen2;
@@ -65,6 +67,8 @@ int main()
             matrix[4][0] = zeichen2;
 
         }
+        
+        // Option 3 initialisieren
         if(counter == 3){
             printf("Eingabe Spalte: ");
             scanf("%d", &s);
@@ -72,6 +76,8 @@ int main()
             scanf("%d", &z);
             matrix[s][z] = zeichen2;
         }
+        
+        // Option 4 initialisieren
         if(counter == 4){
             for(n = 0; n <= zeile; n++){
                 for(m = 0; m <= spalte; m++){
@@ -79,6 +85,8 @@ int main()
                 }
             }
         }
+        
+        // Option 5 ausgabe der Matrix
         if(counter == 5){
             for(n = 0; n < 5; n++){
                 for(m = 0; m < 5; m++){
