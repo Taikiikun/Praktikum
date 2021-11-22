@@ -7,7 +7,7 @@ int main()
     char matrix[5][5];
     int n, m;
     char zeichen = '+';
-    char zeichen2 = '0';
+    char zeichen2 = 'a';
     int counter;
     int s;
     int z;
@@ -38,11 +38,11 @@ int main()
     
     do{
     
-        do{
+        //do{
             printf("Eingabe: ");
             scanf("%d", &counter);
             printf("\n");
-        }while(counter <5);
+        //}while(counter <5);
     
         // Option 1 initialisieren
         if(counter == 1){
@@ -56,6 +56,14 @@ int main()
         
         // Option 2 initialisieren (wie ohne Hardcodeing?)
         if(counter == 2){
+            for(n = 0; n < zeile; n++){
+                for(m = 0; m < spalte; m++){
+                    if(n+m == 4 || n == m){
+                        matrix[n][m] = zeichen2;
+                    }
+                }
+            }
+            /* HARD GECODED SIEHE OBEN FÜR SCHLEIFE
             matrix[0][0] = zeichen2;
             matrix[1][1] = zeichen2;
             matrix[2][2] = zeichen2;
@@ -64,15 +72,15 @@ int main()
             matrix[0][4] = zeichen2;
             matrix[1][3] = zeichen2;
             matrix[3][1] = zeichen2;
-            matrix[4][0] = zeichen2;
+            matrix[4][0] = zeichen2;*/
 
         }
         
         // Option 3 initialisieren
         if(counter == 3){
-            printf("Eingabe Spalte: ");
-            scanf("%d", &s);
             printf("Eingabe Zeile: ");
+            scanf("%d", &s);
+            printf("Eingabe Spalte: ");
             scanf("%d", &z);
             matrix[s][z] = zeichen2;
         }
@@ -99,7 +107,6 @@ int main()
 
     return 0;
 }
-
 
 
 
