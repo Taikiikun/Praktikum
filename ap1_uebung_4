@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int anzahlZeichen(const char wort[], char zeichen)
+{
+    int counter = 0;
+    int anzahlZeichen = 0;
+
+    while(wort[counter] != '\0')
+        {
+            if(wort[counter] == zeichen)
+            {
+                anzahlZeichen++;
+            }
+            counter++;
+        }
+    return counter;
+}
+
+int main()
+{
+    const char MAX = 256;
+    char wort[MAX];
+    char zeichen;
+    int anzahl;
+
+    printf("Bitte Wort eingeben: ");
+    fflush(stdin);
+    scanf(" %s", wort);
+    
+    printf("Bitte zu suchenden Buchstaben eingeben: ");
+    fflush(stdin);
+    scanf(" %s", &zeichen);
+
+    anzahl = anzahlZeichen(wort, zeichen);
+
+    printf("\nDer Buchstabe %s kommt %i-mal im Wort %s vor", zeichen, anzahl, wort);
+
+    return 0;
+}
