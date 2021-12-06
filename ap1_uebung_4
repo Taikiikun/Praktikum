@@ -13,7 +13,7 @@ int anzahlZeichen(const char wort[], char zeichen)
             }
             counter++;
         }
-    return counter;
+    return anzahlZeichen;
 }
 
 int main()
@@ -26,14 +26,14 @@ int main()
     printf("Bitte Wort eingeben: ");
     fflush(stdin);
     scanf(" %s", wort);
-    
+
     printf("Bitte zu suchenden Buchstaben eingeben: ");
     fflush(stdin);
-    scanf(" %s", &zeichen);
+    scanf(" %c", &zeichen);
 
     anzahl = anzahlZeichen(wort, zeichen);
 
-    printf("\nDer Buchstabe %s kommt %i-mal im Wort %s vor", zeichen, anzahl, wort);
+    printf("\nDer Buchstabe %c kommt %i-mal im Wort %s vor", zeichen, anzahl, wort);
 
     return 0;
 }
